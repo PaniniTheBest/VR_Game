@@ -4,7 +4,7 @@ public class PlayerBodyCollider : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<MovingPosList>(out MovingPosList wall))//Player Layer
+        if (collision.gameObject.TryGetComponent<MovingWall>(out MovingWall wall))//Player Layer
         {
             Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
             wall.PauseMovement();
@@ -13,7 +13,7 @@ public class PlayerBodyCollider : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<MovingPosList>(out MovingPosList wall))//Player Layer
+        if (collision.gameObject.TryGetComponent<MovingWall>(out MovingWall wall))//Player Layer
         {
             Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
             wall.ContinueMovement();
