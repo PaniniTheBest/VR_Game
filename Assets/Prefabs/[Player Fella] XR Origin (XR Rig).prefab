@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 1238640753428059106}
   - component: {fileID: 9191571115319394360}
   - component: {fileID: 7905777851429404806}
+  - component: {fileID: 6193533773184464322}
   m_Layer: 6
   m_Name: LeftHand_Collider
   m_TagString: Untagged
@@ -373,6 +374,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78764932d3d8c504e991744321fc6857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &6193533773184464322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203470091663943622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6450250aea6934a8fe241c3cb30979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Punching
+  timePerCheck: 0.1
+  speedThreshold: 2
+  knocbackStrength: 5
 --- !u!1 &3656357851531240402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1549,7 @@ GameObject:
   - component: {fileID: 3616799892785011274}
   - component: {fileID: 1976367415325031345}
   - component: {fileID: 5850361910184391695}
+  - component: {fileID: 6221371587060675926}
   m_Layer: 6
   m_Name: RightHand_Collider
   m_TagString: Untagged
@@ -1647,6 +1664,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78764932d3d8c504e991744321fc6857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &6221371587060675926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348589138602540438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6450250aea6934a8fe241c3cb30979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Punching
+  timePerCheck: 0.1
+  speedThreshold: 2
+  knocbackStrength: 5
 --- !u!1 &7368688562031055944
 GameObject:
   m_ObjectHideFlags: 0

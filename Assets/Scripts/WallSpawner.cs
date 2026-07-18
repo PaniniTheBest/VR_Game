@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class WallSpawner : MonoBehaviour
@@ -8,16 +9,18 @@ public class WallSpawner : MonoBehaviour
     [SerializeField] int amountOfWalls = 10;
     int currentWalls = 0;
     [SerializeField] float destroyTimeOffSet = 0;
+    [SerializeField] int countDownNum = 3;
+    [SerializeField] TextMeshProUGUI countDownTxt;
 
     private void OnEnable()
     {
         finalPos = GameObject.Find("EndPosition").transform;
-        StartCoroutine( SpawnWalls());
     }
 
     IEnumerator SpawnWalls()
     {
         int randomNum = Random.Range(0, wallz.Length);
+        Debug.Log(randomNum);
         GameObject wall = Instantiate(wallz[randomNum], transform.position, wallz[randomNum].transform.rotation);
         yield return SpawnTime(wall);
         currentWalls++;
@@ -35,5 +38,21 @@ public class WallSpawner : MonoBehaviour
             Destroy(obj);
         }
         else yield return null;
+    }
+    IEnumerator CountDown()
+    {
+        countDownTxt.text = $"{countDownNum}";
+        countDownNum--;
+        yield return new WaitForSeconds(1.5f);
+        if (countDownNum >= 0)
+            StartCoroutine(CountDown());
+        else
+            StartCoroutine(SpawnWalls());
+    }
+
+    public void EnableWave()
+    {
+        GameManger.ApplyToUpdate -= EnableWave;
+        StartCoroutine(CountDown());
     }
 }
