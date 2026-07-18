@@ -7,19 +7,23 @@ public class Punching : TransformSpeed
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (GetSpeed() >= speedThreshold)
+        if (GetSpeed() >= speedThreshold)            
         {
-            //=======================================//
-            //          Script by : Uniykiv
-            //https://discussions.unity.com/t/object-knockback/1690979/3
-            Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (collision.transform.TryGetComponent<MovingWall>(out MovingWall wall))
             {
-                Vector3 direction = collision.transform.position - transform.position;
-                direction.y = 0;
-                rb.AddForce(direction.normalized * knocbackStrength, ForceMode.Impulse);
+                wall.isPunched = true;
+                //=======================================//
+                //          Script by : Uniykiv
+                //https://discussions.unity.com/t/object-knockback/1690979/3
+                Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    Vector3 direction = collision.transform.position - transform.position;
+                    //direction.y = 0;
+                    rb.AddForce(direction.normalized * knocbackStrength, ForceMode.Impulse);
+                }
+                //=======================================//
             }
-            //=======================================//
         }
     }
 }

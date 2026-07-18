@@ -7,18 +7,17 @@ public class MovingWall : MonoBehaviour
     [Header("Speed Vars")]
     [SerializeField] float speed = 2.5f;
     [SerializeField] float pauseDuration = 1.5f;
+    [SerializeField] bool isPunchable = true;
     
     //Coroutine coroutineRef; //Used for stopping the couroutine loop 
     bool isPaused = false; //Bool if the object is moving OR is allowed to move
+    public bool isPunched = false;
 
-    private void Start()
-    {
-
-    }
     private void Update()
     {
-        if(!isPaused)
-            LerpToPos();
+        if(!isPunched)
+            if(!isPaused)
+                LerpToPos();
     }
 
     private void LerpToPos()

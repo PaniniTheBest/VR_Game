@@ -16,7 +16,7 @@ public class TransformSpeed : MonoBehaviour
         previousPos = transform.position;
         yield return new WaitForSeconds(timePerCheck);
         yield return speed = Vector3.Distance(transform.position, previousPos);
-        Debug.Log(speed);
+        Debug.Log($"{gameObject.name} : {speed}");
         StartCoroutine(PerSecond());
     }
     public float GetSpeed() { return speed; }
