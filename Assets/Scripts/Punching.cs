@@ -7,9 +7,9 @@ public class Punching : TransformSpeed
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (GetSpeed() >= speedThreshold)            
+        if (GetSpeed() >= speedThreshold)//If in a certain speed, Activate script           
         {
-            if (collision.transform.TryGetComponent<MovingWall>(out MovingWall wall))
+            if (collision.transform.TryGetComponent<MovingWall>(out MovingWall wall)) //Can only interact with "MovingWall Scripts"
             {
                 wall.isPunched = true;
                 //=======================================//

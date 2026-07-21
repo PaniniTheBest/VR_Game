@@ -769,5 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingWall
   finalPos: {fileID: 0}
-  speed: 0.5
-  pauseDuration: 10
+  speed: 0.1
+  durationTime: 10
+  isPunchable: 1
+  isPunched: 0

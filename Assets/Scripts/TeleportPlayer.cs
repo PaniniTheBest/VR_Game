@@ -17,6 +17,7 @@ public class TeleportPlayer : MonoBehaviour
     }
     public void StartTheWallSpawner()
     {
+        //To enable wall spawner in Update()
         GameManger.ApplyToUpdate += wallSpawner.EnableWave;
     }
 }

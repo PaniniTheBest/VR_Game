@@ -34,20 +34,24 @@ public class WallSpawner : MonoBehaviour
         if(obj.TryGetComponent<MovingWall>(out MovingWall wall))
         {
             wall.finalPos = finalPos;
-            yield return new WaitForSeconds(wall.GetPauseTime() + destroyTimeOffSet);
+            yield return new WaitForSeconds(wall.GetDurationTime() + destroyTimeOffSet);
             Destroy(obj);
         }
         else yield return null;
     }
     IEnumerator CountDown()
     {
-        countDownTxt.text = $"{countDownNum}";
-        countDownNum--;
-        yield return new WaitForSeconds(1.5f);
-        if (countDownNum >= 0)
-            StartCoroutine(CountDown());
+        if (countDownTxt == null) yield return null;
         else
-            StartCoroutine(SpawnWalls());
+        {
+            countDownTxt.text = $"{countDownNum}";
+            countDownNum--;
+            yield return new WaitForSeconds(1.5f);
+            if (countDownNum >= 0)
+                StartCoroutine(CountDown());
+            else
+                StartCoroutine(SpawnWalls());
+        }
     }
 
     public void EnableWave()

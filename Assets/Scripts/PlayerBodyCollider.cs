@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerBodyCollider : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision) //To pause a wall
     {
         if (collision.gameObject.TryGetComponent<MovingWall>(out MovingWall wall))//Player Layer
         {
@@ -11,7 +11,7 @@ public class PlayerBodyCollider : MonoBehaviour
         }
         else return;
     }
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision) //To unpause a wall
     {
         if (collision.gameObject.TryGetComponent<MovingWall>(out MovingWall wall))//Player Layer
         {

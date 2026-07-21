@@ -6,7 +6,7 @@ public class MovingWall : MonoBehaviour
     public Transform finalPos;
     [Header("Speed Vars")]
     [SerializeField] float speed = 2.5f;
-    [SerializeField] float pauseDuration = 1.5f;
+    [SerializeField] float durationTime = 1.5f;
     [SerializeField] bool isPunchable = true;
     
     //Coroutine coroutineRef; //Used for stopping the couroutine loop 
@@ -40,7 +40,7 @@ public class MovingWall : MonoBehaviour
         isPaused = false;
         //coroutineRef = StartCoroutine(GoToTransformPos());
     }
-    public float GetPauseTime() { return pauseDuration; }
+    public float GetDurationTime() { return durationTime; }
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -6,6 +6,7 @@ public class TransformSpeed : MonoBehaviour
     [SerializeField] float timePerCheck = 0.1f;
     Vector3 previousPos;
     float speed;
+    [SerializeField] bool isInDebug = false;
     void Start()
     {
         StartCoroutine(PerSecond());
@@ -16,7 +17,8 @@ public class TransformSpeed : MonoBehaviour
         previousPos = transform.position;
         yield return new WaitForSeconds(timePerCheck);
         yield return speed = Vector3.Distance(transform.position, previousPos);
-        Debug.Log($"{gameObject.name} : {speed}");
+        if(isInDebug)
+            Debug.Log($"{gameObject.name} : {speed}");
         StartCoroutine(PerSecond());
     }
     public float GetSpeed() { return speed; }
