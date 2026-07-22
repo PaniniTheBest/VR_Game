@@ -5,8 +5,8 @@ public class MovingWall : MonoBehaviour
 {
     public Transform finalPos;
     [Header("Speed Vars")]
-    [SerializeField] float speed = 2.5f;
-    [SerializeField] float durationTime = 1.5f;
+    [SerializeField] float speed = 0.25f;
+    [SerializeField] float durationTime = 10f;
     [SerializeField] bool isPunchable = true;
     
     //Coroutine coroutineRef; //Used for stopping the couroutine loop 
@@ -15,9 +15,8 @@ public class MovingWall : MonoBehaviour
 
     private void Update()
     {
-        if(!isPunched)
-            if(!isPaused)
-                LerpToPos();
+        if(!isPunched && !isPaused)
+            LerpToPos();
     }
 
     private void LerpToPos()
@@ -42,13 +41,13 @@ public class MovingWall : MonoBehaviour
     }
     public float GetDurationTime() { return durationTime; }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == 6)//Player Layer
-        {
-            Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
-            PauseMovement(); 
-        }
-        else return;
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.layer == 6)//Player Layer
+    //    {
+    //        Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
+    //        PauseMovement(); 
+    //    }
+    //    else return;
+    //}
 }

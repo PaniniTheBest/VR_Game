@@ -1,6 +1,7 @@
 using UnityEngine;
 public class MirrorScript : MonoBehaviour
 {
+    //Do not Activate script, only works for smaller mirror
     [SerializeField] Transform playerPos;
     [SerializeField] Transform mirror;
     void Update()

@@ -9,7 +9,13 @@ public class PlayerBodyCollider : MonoBehaviour
             Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
             wall.PauseMovement();
         }
+        else if(collision.gameObject.GetComponentInParent<GameObject>().gameObject.TryGetComponent<MovingWall>(out MovingWall parentwall))
+        {
+            Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
+            parentwall.PauseMovement();
+        }
         else return;
+
     }
     private void OnCollisionExit(Collision collision) //To unpause a wall
     {
@@ -17,6 +23,11 @@ public class PlayerBodyCollider : MonoBehaviour
         {
             Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
             wall.ContinueMovement();
+        }
+        else if (collision.gameObject.GetComponentInParent<GameObject>().gameObject.TryGetComponent<MovingWall>(out MovingWall parentwall))
+        {
+            Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
+            parentwall.ContinueMovement();
         }
         else return;
     }
