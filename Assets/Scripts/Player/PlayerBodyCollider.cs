@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerBodyCollider : MonoBehaviour
 {
+    [SerializeField] private int points = 10;
     private void OnCollisionEnter(Collision collision) //To pause a wall
     {
         if (collision.gameObject.TryGetComponent<MovingWall>(out MovingWall wall))//Player Layer
@@ -30,5 +31,14 @@ public class PlayerBodyCollider : MonoBehaviour
             parentwall.ContinueMovement();
         }
         else return;
+    }
+
+    private void OnTriggerEnter(Collider pointsPlane)
+    {
+        if(pointsPlane.gameObject.layer == 8)
+        {
+            Debug.Log("PLAYER WITH POINTS");
+            PointHandler.instance.AddPoint(points);
+        }
     }
 }

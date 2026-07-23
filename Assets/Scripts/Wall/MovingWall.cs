@@ -40,14 +40,4 @@ public class MovingWall : MonoBehaviour
         //coroutineRef = StartCoroutine(GoToTransformPos());
     }
     public float GetDurationTime() { return durationTime; }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.layer == 6)//Player Layer
-    //    {
-    //        Debug.Log($"{gameObject.name} Is Collided with {collision.gameObject.name}");
-    //        PauseMovement(); 
-    //    }
-    //    else return;
-    //}
 }

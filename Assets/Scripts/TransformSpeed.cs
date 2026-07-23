@@ -7,6 +7,7 @@ public class TransformSpeed : MonoBehaviour
     Vector3 previousPos;
     float speed;
     [SerializeField] bool isInDebug = false;
+    
     void Start()
     {
         StartCoroutine(PerSecond());
