@@ -41,4 +41,13 @@ public class PointHandler : MonoBehaviour
         if (highScore_Value < currentScore_Value)
             PlayerPrefs.SetInt("highScore_Value", currentScore_Value);
     }
+    public void MinusPoint(int pointValue)
+    {
+        currentScore_Value -= pointValue;
+        currentScore_Txt.text = "Score: " + currentScore_Value.ToString();
+
+        if (highScore_Value < currentScore_Value)
+            PlayerPrefs.SetInt("highScore_Value", currentScore_Value);
+    }
+
 }

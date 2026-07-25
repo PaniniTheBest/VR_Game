@@ -62,7 +62,7 @@ MonoBehaviour:
   finalPos: {fileID: 0}
   speed: 0.25
   durationTime: 10
-  isPunchable: 1
+  isPunchable: 0
   isPunched: 0
 --- !u!54 &6149621246273082199
 Rigidbody:
