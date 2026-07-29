@@ -24,13 +24,11 @@ public class MovingWall : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, finalPos.position, speed * Time.deltaTime);
     }
 
-    public void PauseMovement()
+    public IEnumerator PauseMovement()
     {
         Debug.Log($"{gameObject.name} HAS PAUSED ITS MOVEMENT");
         isPaused = true;
-
-        //StopCoroutine(coroutineRef);
-        //coroutineRef = null;
+        yield return null;
     }
 
     public void ContinueMovement()

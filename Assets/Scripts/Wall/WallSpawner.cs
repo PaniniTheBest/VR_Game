@@ -25,7 +25,10 @@ public class WallSpawner : MonoBehaviour
         yield return SpawnTime(wall);
         currentWalls++;
         if (currentWalls >= amountOfWalls)
+        {
+            countDownTxt.text = "GAME OVER";
             yield break;
+        }
         else
             StartCoroutine(SpawnWalls());
     }

@@ -49,5 +49,4 @@ public class PointHandler : MonoBehaviour
         if (highScore_Value < currentScore_Value)
             PlayerPrefs.SetInt("highScore_Value", currentScore_Value);
     }
-
 }
