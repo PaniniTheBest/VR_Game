@@ -35,17 +35,10 @@ public class PlayerBodyCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider pointsPlane)
     {
-        if (pointsPlane.TryGetComponent<WallColliderz>(out WallColliderz wall))
-            if (wall.gameObject.layer == 8 && wall.GetIsTouched() == false) // Point Layer
-            {
-                wall.ColliderIsTouched();
-                PointHandler.instance.AddPoint(points);
-            }
-            else if (wall.gameObject.layer == 3 && wall.GetIsTouched() == false) // Wall Layer
-            {
-                wall.ColliderIsTouched();
-                PointHandler.instance.MinusPoint(points / 2);
-            }
-            else return;
+        if (pointsPlane.gameObject.layer == 8 ) // Point Layer
+            PointHandler.instance.AddPoint(points);
+        else if (pointsPlane.gameObject.layer == 3) // Wall Layer
+            PointHandler.instance.MinusPoint(points / 2);    
+        else return;
     }
 }

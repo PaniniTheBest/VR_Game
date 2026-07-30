@@ -38,4 +38,5 @@ public class MovingWall : MonoBehaviour
         //coroutineRef = StartCoroutine(GoToTransformPos());
     }
     public float GetDurationTime() { return durationTime; }
+    public bool GetIsPunchable() { return isPunchable; }
 }
