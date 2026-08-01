@@ -8,6 +8,7 @@ public class MovingWall : MonoBehaviour
     [SerializeField] float speed = 0.25f;
     [SerializeField] float durationTime = 10f;
     [SerializeField] bool isPunchable = true;
+    [SerializeField] float destroyTime = 2.0f;
     
     //Coroutine coroutineRef; //Used for stopping the couroutine loop 
     bool isPaused = false; //Bool if the object is moving OR is allowed to move
@@ -36,6 +37,11 @@ public class MovingWall : MonoBehaviour
         Debug.Log($"{gameObject.name} HAS PAUSED ITS MOVEMENT");
         isPaused = false;
         //coroutineRef = StartCoroutine(GoToTransformPos());
+    }
+    public IEnumerator DestroyObjTimely()
+    {
+        yield return new WaitForSeconds(destroyTime);
+        Destroy(gameObject);
     }
     public float GetDurationTime() { return durationTime; }
     public bool GetIsPunchable() { return isPunchable; }

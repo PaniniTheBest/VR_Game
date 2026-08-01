@@ -29,16 +29,17 @@ public class Punching : TransformSpeed
         if (GetSpeed() >= speedThreshold)//If in a certain speed, Activate script                 
             if (collision.transform.parent.TryGetComponent<MovingWall>(out MovingWall wall) && wall.GetIsPunchable()) //Can only interact with "MovingWall Scripts"
             {
-                wall.isPunched = true;
                 //=======================================//
                 //          Script by : Uniykiv
                 //https://discussions.unity.com/t/object-knockback/1690979/3
                 Rigidbody rb = collision.GetComponent<Rigidbody>();
-                if (rb != null)
+                if (rb != null && !wall.isPunched)
                 {
+                    wall.isPunched = true;
                     Vector3 direction = collision.transform.position - transform.position;
                     //direction.y = 0;
                     rb.AddForce(direction.normalized * knocbackStrength, ForceMode.Impulse);
+                    StartCoroutine(wall.DestroyObjTimely());
                 }
                 //=======================================//
             }       
