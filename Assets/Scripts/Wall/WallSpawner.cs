@@ -53,7 +53,10 @@ public class WallSpawner : MonoBehaviour
             if (countDownNum >= 0)
                 StartCoroutine(CountDown());
             else
+            {
+                countDownTxt.text = $" GO !";
                 StartCoroutine(SpawnWalls());
+            }
         }
     }
 

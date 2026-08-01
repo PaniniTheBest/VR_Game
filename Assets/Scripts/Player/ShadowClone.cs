@@ -18,6 +18,6 @@ public class ShadowClone : MonoBehaviour
     {
         Vector3 objectToFollow = mirror.InverseTransformPoint(player.position);
         transform.position = mirror.TransformPoint(new Vector3(objectToFollow.x, objectToFollow.y, -objectToFollow.z));
-        transform.localRotation = Quaternion.Euler(new Vector3(player.rotation.x, player.rotation.y, player.rotation.z));
+        transform.localRotation = player.rotation;
     }
 }

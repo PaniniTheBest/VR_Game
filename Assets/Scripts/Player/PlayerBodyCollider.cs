@@ -35,10 +35,13 @@ public class PlayerBodyCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider pointsPlane)
     {
-        if (pointsPlane.gameObject.layer == 8 ) // Point Layer
+        if (pointsPlane.gameObject.layer == 8) // Point Layer
             PointHandler.instance.AddPoint(points);
         else if (pointsPlane.gameObject.layer == 3) // Wall Layer
-            PointHandler.instance.MinusPoint(points / 2);    
+        {
+            PointHandler.instance.MinusPoint(points / 2);
+            Destroy(pointsPlane.gameObject);
+        }
         else return;
     }
 }
