@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &15369500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6337473644896885335, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_Name
+      value: '[Player BackRooms] XR Origin (XR Rig) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.4096994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05000166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6419613
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523167609617244980, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41f5bc27aa4bb8d46a1b8341ae3baa1f, type: 3}
 --- !u!1 &95407753
 GameObject:
   m_ObjectHideFlags: 0
@@ -7126,6 +7183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Player Fella] XR Origin (XR Rig)'
       objectReference: {fileID: 0}
+    - target: {fileID: 6337473644896885335, guid: 274c9957d028da649ac0228c778a2548, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7183,3 +7244,4 @@ SceneRoots:
   - {fileID: 7701688884608899810}
   - {fileID: 2466207489565295776}
   - {fileID: 3341170643148169929}
+  - {fileID: 15369500}
