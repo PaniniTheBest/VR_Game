@@ -18,7 +18,8 @@ public class Detectorist : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("Opening Door");
-            DoorAnimator.SetBool("IsOpen", true);
+            DoorAnimator.Play("DoorOpening", 0, 0.0f);
+            gameObject.SetActive(false);
         }
     }
 }
