@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 25277429475050005}
   - component: {fileID: 5721100349833136020}
   - component: {fileID: 1355765923802165001}
+  - component: {fileID: 8034006588891668330}
   m_Layer: 0
   m_Name: CameraOverlay
   m_TagString: Untagged
@@ -337,6 +338,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8034006588891668330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123542843780230368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c603dfcc3a9ae3e4fa6f23ca52835fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoPeekingTroughWalls
+  collideLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  fadeSpeed: 6
+  sphereCheckSize: 0.15
+  cameraMaterial: {fileID: 0}
+  gizmoColor: {r: 0.58856505, g: 1, b: 0.3160377, a: 0.36862746}
 --- !u!1 &3656357851531240402
 GameObject:
   m_ObjectHideFlags: 0

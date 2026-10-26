@@ -6,7 +6,8 @@ public class NoPeekingTroughWalls : MonoBehaviour
     [SerializeField] float fadeSpeed = 6;
     [SerializeField] float sphereCheckSize = 0.15f;
 
-    private Material cameraMaterial;
+    [SerializeField] Material cameraMaterial;
+    [SerializeField] Color gizmoColor;
     private bool isCameraFadingOut = false;
 
     private void Awake()
@@ -15,7 +16,7 @@ public class NoPeekingTroughWalls : MonoBehaviour
     }
     private void Update()
     {
-        if(Physics.CheckSphere(transform.position, sphereCheckSize,collideLayers,QueryTriggerInteraction.Ignore)) //Head/Camera Collider
+        if(Physics.CheckSphere(transform.position, sphereCheckSize, collideLayers ,QueryTriggerInteraction.Ignore)) //Head/Camera Collider
         {
             CameraFade(1f);
             isCameraFadingOut = true;
@@ -30,7 +31,15 @@ public class NoPeekingTroughWalls : MonoBehaviour
     private void CameraFade(float targetAlpha)
     {
         var fadeValue = Mathf.MoveTowards(cameraMaterial.GetFloat("_AlphaValue"), targetAlpha, Time.deltaTime * fadeSpeed);
-        isCameraFadingOut = false;
+        cameraMaterial.SetFloat("_AlphaValue", fadeValue);
 
+        if(fadeValue <= 0.01f)
+            isCameraFadingOut = false;
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = gizmoColor;
+        Gizmos.DrawSphere(transform.position, sphereCheckSize);
     }
 }
