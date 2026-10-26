@@ -16801,57 +16801,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1305336610270803085, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144068411427927946, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144068411427927946, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144068411427927946, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6144068411427927946, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6193533773184464322, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: speedThreshold
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 6193533773184464322, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: knocbackStrength
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221371587060675926, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: speedThreshold
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221371587060675926, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: knocbackStrength
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6337473644896885335, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_Name
       value: '[Player Fella] XR Origin (XR Rig)'
       objectReference: {fileID: 0}
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 33.28
       objectReference: {fileID: 0}
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.25
+      value: -28.14
       objectReference: {fileID: 0}
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16880,10 +16844,6 @@ PrefabInstance:
     - target: {fileID: 7523167609617244980, guid: 274c9957d028da649ac0228c778a2548, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8249141377466984280, guid: 274c9957d028da649ac0228c778a2548, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50598,7 +50558,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 583246426}
+  m_Mesh: {fileID: 1051227161}
 --- !u!33 &726178506
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -59009,143 +58969,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &872892645
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 872892648}
-  - component: {fileID: 872892647}
-  - component: {fileID: 872892646}
-  - component: {fileID: 872892649}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &872892646
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872892645}
-  m_Enabled: 1
---- !u!20 &872892647
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872892645}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &872892648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872892645}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &872892649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872892645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
 --- !u!1 &873546416
 GameObject:
   m_ObjectHideFlags: 0
@@ -79209,7 +79032,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 673750455}
+  m_Mesh: {fileID: 72700184}
 --- !u!33 &1188627489
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -86336,7 +86159,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 285291734}
+  m_Mesh: {fileID: 1448253393}
 --- !u!33 &1295934092
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -127303,7 +127126,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1448253393}
+  m_Mesh: {fileID: 1208763610}
 --- !u!33 &1665838073
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -161040,7 +160863,6 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 872892648}
   - {fileID: 1341627115}
   - {fileID: 2124617192}
   - {fileID: 1919849807}
